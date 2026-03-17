@@ -31,7 +31,7 @@ stages:
           backendAzureRmResourceGroupName: 'terraform-state-rg'
           backendAzureRmStorageAccountName: 'tfdevbackend2026rash'
           backendAzureRmContainerName: 'tfstate'
-          backendAzureRmKey: 'dev.terraform.tfstate'
+          backendAzureRmKey: 'dev.tfstate'
       - task: TerraformTask@5
         inputs:
           provider: 'azurerm'
@@ -57,7 +57,7 @@ stages:
         backendAzureRmResourceGroupName: 'terraform-state-rg'
         backendAzureRmStorageAccountName: 'tfdevbackend2026rash'
         backendAzureRmContainerName: 'tfstate'
-        backendAzureRmKey: 'dev.terraform.tfstate'
+        backendAzureRmKey: 'dev.tfstate'
 
     - task: TerraformTask@5
       inputs:
@@ -87,7 +87,7 @@ stages:
         backendAzureRmResourceGroupName: 'terraform-state-rg'
         backendAzureRmStorageAccountName: 'tfstagebackend2026rash'
         backendAzureRmContainerName: 'tfstate'
-        backendAzureRmKey: 'stage.terraform.tfstate'
+        backendAzureRmKey: 'stage.tfstate'
 
     - task: TerraformTask@5
       inputs:
