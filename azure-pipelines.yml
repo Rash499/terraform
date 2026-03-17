@@ -43,7 +43,7 @@ stages:
   jobs: 
   - job: terraform_apply_dev
     pool:
-      vmImage: 'ubuntu-latest'
+      vmImage: agentpool_1
     steps:
     - task: TerraformInstaller@1
       inputs:
@@ -72,7 +72,7 @@ stages:
   jobs: 
   - job: terraform_apply_stage
     pool:
-      vmImage: 'ubuntu-latest'
+      vmImage: agentpool_1
     steps: 
 
     - task: TerraformInstaller@1
