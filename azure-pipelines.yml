@@ -39,7 +39,7 @@ stages:
           workingDirectory: '$(System.DefaultWorkingDirectory)/dev'
       
 - stage: Dev_Deploy
-  condition: and(succeeded(), eq(vaiables['Build.SourceBranch'], 'refs/heads/main'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   jobs: 
   - job: terraform_apply_dev
     pool:
@@ -68,7 +68,7 @@ stages:
         environmentServiceNameAzureRM: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
     
 - stage: stage_deploy
-  condition: and(succeeded(), eq(vaiables['Build.SourceBranch'], 'refs/heads/main'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   jobs: 
   - job: terraform_apply_stage
     pool:
