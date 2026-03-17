@@ -32,6 +32,7 @@ stages:
           backendAzureRmStorageAccountName: 'tfdevbackend2026rash'
           backendAzureRmContainerName: 'tfstate'
           backendAzureRmKey: 'dev.tfstate'
+          backendAzureRmAccessKey: '$(DEV_STORAGE_ACCOUNT_KEY)'
           
       - task: TerraformTask@5
         inputs:
@@ -59,6 +60,7 @@ stages:
         backendAzureRmStorageAccountName: 'tfdevbackend2026rash'
         backendAzureRmContainerName: 'tfstate'
         backendAzureRmKey: 'dev.tfstate'
+        backendAzureRmAccessKey: '$(DEV_STORAGE_ACCOUNT_KEY)'
 
     - task: TerraformTask@5
       inputs:
@@ -89,6 +91,7 @@ stages:
         backendAzureRmStorageAccountName: 'tfstagebackend2026rash'
         backendAzureRmContainerName: 'tfstate'
         backendAzureRmKey: 'stage.tfstate'
+        backendAzureRmAccessKey: '$(STAGE_STORAGE_ACCOUNT_KEY)'
 
     - task: TerraformTask@5
       inputs:
