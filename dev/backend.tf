@@ -5,7 +5,6 @@ terraform {
     container_name      = "tfstate"
     key                 = "dev.tfstate"
 
-    access_key = "SwL+JGwkAAA2kXTQk+g4phDLRzsbiKX4xqgp5V91cEmaiZw6grzkv5u0nfzeqyjGIsIJtR9ASTYu+AStGHgC4A=="
 
   }
 }
