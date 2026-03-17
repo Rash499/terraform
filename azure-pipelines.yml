@@ -17,7 +17,7 @@ stages:
 
 
     pool:
-      vmImage: agentpool_1
+      name: agentpool_1
     steps:
       - task: TerraformInstaller@1
         inputs:
@@ -43,7 +43,7 @@ stages:
   jobs: 
   - job: terraform_apply_dev
     pool:
-      vmImage: agentpool_1
+      name: agentpool_1
     steps:
     - task: TerraformInstaller@1
       inputs:
@@ -72,7 +72,7 @@ stages:
   jobs: 
   - job: terraform_apply_stage
     pool:
-      vmImage: agentpool_1
+      name: agentpool_1
     steps: 
 
     - task: TerraformInstaller@1
