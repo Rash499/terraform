@@ -6,6 +6,7 @@ terraform {
     key                 = "stage.tfstate"
 
     access_key = "bbkVoKoHobfeWNUEPL1oCxbRTtz89YPWM2bLlt075kSZoyYCcOC59zS8QclEITOST68fPWBDxY6/+AStCYMFpQ=="
+
   }
 }
 
