@@ -55,13 +55,12 @@ module "aks" {
   client_secret          = module.ServicePrincipal.client_secret
   location               = var.location
   resource_group_name    = var.rgname
-  cluster_name = var.cluster_name
-  node_pool_name = var.node_pool_name
+  cluster_name           = var.cluster_name
+  node_pool_name         = var.node_pool_name
 
   depends_on = [
     module.ServicePrincipal
   ]
-
 }
 
 resource "local_file" "kubeconfig" {
