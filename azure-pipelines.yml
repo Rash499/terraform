@@ -26,9 +26,10 @@ stages:
         inputs:
           provider: 'azurerm'
           command: 'init'
-          backendServiceArm: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
           workingDirectory: '$(System.DefaultWorkingDirectory)/dev'
-          backendAzureRmResourceGroupName: 'terraform-state-rg'
+          backendAzureRmUseEntraIdForAuthentication: false
+          backendServiceArm: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
+          backendAzureRmResourceGroupName: 'terraform-stage-rg'
           backendAzureRmStorageAccountName: 'tfdevbackend2026rash'
           backendAzureRmContainerName: 'tfstate'
           backendAzureRmKey: 'dev.tfstate'
@@ -54,9 +55,10 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'init'
-        backendServiceArm: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
         workingDirectory: '$(System.DefaultWorkingDirectory)/dev'
-        backendAzureRmResourceGroupName: 'terraform-state-rg'
+        backendAzureRmUseEntraIdForAuthentication: false
+        backendServiceArm: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
+        backendAzureRmResourceGroupName: 'terraform-stage-rg'
         backendAzureRmStorageAccountName: 'tfdevbackend2026rash'
         backendAzureRmContainerName: 'tfstate'
         backendAzureRmKey: 'dev.tfstate'
@@ -85,13 +87,13 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'init'
-        backendServiceArm: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
         workingDirectory: '$(System.DefaultWorkingDirectory)/staging'
+        backendAzureRmUseEntraIdForAuthentication: false
+        backendServiceArm: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
         backendAzureRmResourceGroupName: 'terraform-state-rg'
         backendAzureRmStorageAccountName: 'tfstagebackend2026rash'
         backendAzureRmContainerName: 'tfstate'
         backendAzureRmKey: 'stage.tfstate'
-        backendAzureRmAccessKey: '$(STAGE_STORAGE_ACCOUNT_KEY)'
 
     - task: TerraformTask@5
       inputs:
