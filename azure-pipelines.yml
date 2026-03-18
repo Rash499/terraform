@@ -29,7 +29,7 @@ stages:
           workingDirectory: '$(System.DefaultWorkingDirectory)/dev'
           backendAzureRmUseEntraIdForAuthentication: false
           backendServiceArm: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
-          backendAzureRmResourceGroupName: 'terraform-stage-rg'
+          backendAzureRmResourceGroupName: 'terraform-state-rg'
           backendAzureRmStorageAccountName: 'tfdevbackend2026rash'
           backendAzureRmContainerName: 'tfstate'
           backendAzureRmKey: 'dev.tfstate'
@@ -58,7 +58,7 @@ stages:
         workingDirectory: '$(System.DefaultWorkingDirectory)/dev'
         backendAzureRmUseEntraIdForAuthentication: false
         backendServiceArm: 'Rashmika Subscription – MPN(08d552c6-56bb-47f3-ab48-de814729e62e)'
-        backendAzureRmResourceGroupName: 'terraform-stage-rg'
+        backendAzureRmResourceGroupName: 'terraform-state-rg'
         backendAzureRmStorageAccountName: 'tfdevbackend2026rash'
         backendAzureRmContainerName: 'tfstate'
         backendAzureRmKey: 'dev.tfstate'
