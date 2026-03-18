@@ -19,14 +19,12 @@ resource "azurerm_kubernetes_cluster" "aks-cluster" {
   
   default_node_pool {
     name       = var.node_pool_name
-    vm_size    = "Standard_DS2_v2"
-    zones   = [1, 2, 3]
+    vm_size    = "Standard_B2s"
     auto_scaling_enabled = true
     max_count            = 3
     min_count            = 1
     os_disk_size_gb      = 30
     type                 = "VirtualMachineScaleSets"
-
   }
 
   service_principal  {
@@ -40,7 +38,7 @@ resource "azurerm_kubernetes_cluster" "aks-cluster" {
   linux_profile {
     admin_username = "ubuntu"
     ssh_key {
-        key_data = trimspace(file(var.ssh_public_key))
+      key_data = tls_private_key.ssh.public_key_openssh
     }
   }
 

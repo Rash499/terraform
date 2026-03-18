@@ -4,12 +4,6 @@ terraform {
     storage_account_name = "tfstagebackend2026rash"
     container_name      = "tfstate"
     key                 = "stage.tfstate"
-
-    access_key = "bbkVoKoHobfeWNUEPL1oCxbRTtz89YPWM2bLlt075kSZoyYCcOC59zS8QclEITOST68fPWBDxY6/+AStCYMFpQ=="
-<<<<<<< HEAD
-=======
-
->>>>>>> 43a3cd3 (Add access key to backend configuration)
   }
 }
 
