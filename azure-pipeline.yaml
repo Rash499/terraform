@@ -5,7 +5,7 @@ trigger:
       - feature/*
   paths:
     include:
-      - azure-pipeline
+      - azure-pipeline.yaml
 
 stages:
 - stage: validate
